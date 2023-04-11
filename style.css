@@ -23,7 +23,9 @@ hr {
 }
 
 .container.header__container {
-    background: #f9f9ff;
+    background-image: url(./assets/header_bg.png);
+    background-repeat:no-repeat;
+    background-size: 100vw 125vh;
 }
 
 .heading {
@@ -93,10 +95,12 @@ hr {
 }
 
 .main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8rem;
     align-items: center;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .main__left,
@@ -138,14 +142,21 @@ hr {
     background: #ffffff;
     box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
     border-radius: 6px;
+    top: 0px;
+    right: 50px;
+    position: sticky;
+    max-width: 500px;
+    align-self: flex-start;
+
     
 }
 
 .main__form {
-    width: 85%;
+    background: #ffffff;
+    
+    padding: 50px;
+    width: 100%;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .main__form-heading {
@@ -227,7 +238,7 @@ hr {
 
 .reviews {
     display: flex;
-    gap: 8rem;
+   
 }
 
 .reviews > div {
