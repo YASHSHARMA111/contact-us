@@ -6,14 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style2.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <!-- Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
         <style>
             .main__left-achievements_image{
                
             }
             .main__left-achievements_para{
-                width: 100px;
+                width: 140px;
                 height: 16px;
-
+                margin-left: 20px;
                 font-family: 'Inter';
                 font-style: normal;
                 font-weight: 600;
@@ -35,9 +49,9 @@
                 flex-grow: 0;
             }
             .desc2{
-                width: 310px;
+                width:305px;
                 height: 14px;
-
+                margin-left: -30px;
                 font-family: 'Manrope';
                 font-style: normal;
                 font-weight: 700;
@@ -61,7 +75,7 @@
                 position: absolute;
                 width: 395px;
                 height: 139px;
-                left: 305px;
+                left: 180px;
                 padding-top: 25px;
 
                 /* B5 */
@@ -77,6 +91,11 @@
                 color: #0B1D39;
 
             }
+            .carousel-control-prev,
+            .carousel-control-next {
+            display: none;
+            }
+
         </style>
     </head>
     <body>
@@ -110,9 +129,31 @@
                         streamlining your payout process.
                     </p>
                     <div class="main__left-achievements">
-                        <img src="./assets/Barden York.png" class="main__left-achievements_image">
-                        <p class="main__left-achievements_para">Barden York,<p class="desc2">Head of Business development iSmartScout</p></p>
-                        <p class="main__left-achievements_desc">ElevateHQ broke down commissions on a deal level, which was awesome. Sales reps now have a lot more transparency about where their commissions are coming from. They’ve been able to track and hit their goals because they understand how things break down on average” </p>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="cursor: pointer;" onclick="$('#carouselExampleControls').carousel('next');">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div style="display: flex;">
+                                  <img src="./assets/Barden York.png" class="main__left-achievements_image">
+                                  <p class="main__left-achievements_para">Braden York,<p class="desc2">Head of Business development iSmartScout</p></p>
+                                  <p class="main__left-achievements_desc">ElevateHQ broke down commissions on a deal level, which was awesome. Sales reps now have a lot more transparency about where their commissions are coming from. They’ve been able to track and hit their goals because they understand how things break down on average” </p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div style="display: flex;">
+                                  <img src="./assets/avatar.png" class="main__left-achievements_image">
+                                  <p class="main__left-achievements_para">Mark Truman,<p class="desc2">Chief Revenue Officer | EdgePetrol</p></p>
+                                  <p class="main__left-achievements_desc">ElevateHQ broke down commissions on a deal level, which was awesome. Sales reps now have a lot more transparency about where their commissions are coming from. They’ve been able to track and hit their goals because they understand how things break down on average” </p>
+                                </div>
+                              </div>
+                            </div>
+                            <br/><br/>
+                            <div class="reviews__controllers">
+                              <div></div>
+                              <div></div>
+                            </div>
+                          </div>
+                          
+                          
                     </div>
                 </div>
                 <div class="main__right">
@@ -161,7 +202,7 @@
             </section>
         </div>
 
-        <div class="container">
+       <!-- <div class="container">
             <section class="reviews">
                 <div>
                     <h1 class="reviews__heading heading">
@@ -189,7 +230,7 @@
                 </div>
                 <div></div>
             </section>
-        </div>
+        </div>-->
         <hr />
         <div class="container">
             <section class="clients">
@@ -213,7 +254,8 @@
         <br />
         <div class="achivements_container">
         <hr >
-         <div class="achievments_images">
+         <div class="achievments_images" style="flex-direction: column;justify-content: center;">
+            <div>
                         <img
                             src="./assets/SalesCompensation_BestEstimatedROI_Roi.png"
                             alt=""
@@ -226,7 +268,14 @@
                             src="./assets/SalesCompensation_FastestImplementation_GoLiveTime.png"
                             alt=""
                         />
+                        </div>
+                        <div style="display: flex;margin-bottom: 10px;">
+                            <img src="./assets/Vector.png"/>
+                            <img src="./assets/Vector.png"/><img src="./assets/Vector.png"/><img src="./assets/Vector.png"/><img src="./assets/Vector.png"/>
+                            <img src="./assets/5 ratings.png" style="margin-top:8px; margin-left:12px;"/>
+                        </div>
          </div>
+       
         <hr >
         </div>
 

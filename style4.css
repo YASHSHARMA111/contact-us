@@ -9,12 +9,15 @@ font-family: 'Manrope', sans-serif; */
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
 }
-body {
-    background-image: url(./assets/header_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100vw 135vh;
-  }
+
+
+    body {
+        background-image: url(./assets/header_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 100vw 125vh;
+      }
+      
 
 hr {
     width: 30%;
@@ -26,6 +29,10 @@ hr {
 .container {
     padding: 2rem 8rem;
     margin-bottom: 100px;
+}
+
+.container.header__container {
+
 }
 
 .heading {
@@ -95,10 +102,12 @@ hr {
 }
 
 .main {
-    display: flex;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
     align-items: center;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .main__left,
@@ -127,38 +136,8 @@ hr {
 }
 
 .main__left-achievements img {
-    width: 160px;
-    height: 171px;
-    border-radius: 4px;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.achivements_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.achivements_container hr{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.achievments_images{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.04), 0px 2px 12px rgba(0, 0, 0, 0.04);
-    border-radius: 20px;
-    width:100%;
+    width: 72px;
+    height: 92px;
 }
 
 .main__left-achievements img:nth-child(2) {
@@ -170,11 +149,22 @@ hr {
     background: #ffffff;
     box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
     border-radius: 6px;
+    top: 0px;
+    left:-30px;
+    right: 0px;
+    position: sticky;
+    max-width: 500px;
+    align-self: flex-start;
 
+    
 }
 
 .main__form {
-    margin: 40px;
+    background: #ffffff;
+    
+    padding: 50px;
+    width: 100%;
+    margin: auto;
 }
 
 .main__form-heading {
@@ -256,7 +246,7 @@ hr {
 
 .reviews {
     display: flex;
-    
+   
 }
 
 .reviews > div {
